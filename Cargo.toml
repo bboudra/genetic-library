@@ -1,0 +1,6 @@
+[package]
+name = "genetic-library"
+version = "0.1.0"
+authors = ["Benjamin Boudra <benboudra@gmail.com>"]
+
+[dependencies]
