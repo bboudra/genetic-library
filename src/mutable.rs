@@ -1,3 +1,5 @@
-trait Mutate {
-    fn mutate(&self) -> Result
+use ::error::GeneticError;
+use rand::StdRng;
+trait Mutable {
+    fn mutate(&self, StdRng)-> GeneticError<()>;
 }
