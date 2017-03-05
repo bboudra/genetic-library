@@ -85,9 +85,12 @@ impl GeneticByte {
 impl fmt::Display for GeneticByte {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         match self {
-            &GeneticByte::genetic_operator(value)
+            &GeneticByte::genetic_operator(value) => {
+                write!(f, "{} ", value)
+            },
+            &GeneticByte::genetic_operator(operator) => {
+                write!(f, "{} ", operator as char)
+            }
         }
-            write!(f, "{} ", self.value)
-            write!(f, "{} ", self.value as char)
     }
 }
