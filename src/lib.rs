@@ -2,12 +2,13 @@
 /// implemented on those traits to allow the rapid development of genetic utilities and libraries.
 
 extern crate rand;
-
+extern crate probability;
 //modules
 pub mod interfaces;
 pub mod mutable;
 pub mod error;
 pub mod genetic_string;
+pub mod genetic_byte;
 
 // Use statements
 use error::GeneticError;

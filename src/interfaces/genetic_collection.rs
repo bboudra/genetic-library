@@ -2,10 +2,14 @@
 
 use ::mutable::Mutable;
 use ::GeneticResult;
-use std::iter::Iterator;
+use std::fmt::{Display, Debug};
+use rand::StdRng;
 
-pub trait GeneticCollection: Mutable + Iterator {
-    fn get_fitness(&self, target: f64) -> GeneticResult<f64>;
+pub trait GeneticCollection: Mutable + Debug + Display {
+    type Child;
 
-    //fn breed(&self, Self) -> GeneticResult<Self>;
+    fn get_fitness(&self, f64) -> GeneticResult<f64>;
+
+    fn breed(&self, &Self, &mut StdRng) -> GeneticResult<Self::Child>;
+
 }
